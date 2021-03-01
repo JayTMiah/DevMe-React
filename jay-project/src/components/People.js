@@ -1,10 +1,10 @@
-let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
+let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]; 
 
 const People = () => (
     <ul className = 'people-list'>
         {names.map((value, index) => (
             <li className='name'key={ index }>
-                <p className='person' href={'/name/' + value}> { value } </p>
+               { value }
             </li>
         ))}
     </ul>

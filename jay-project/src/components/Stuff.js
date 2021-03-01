@@ -5,7 +5,7 @@ import People from "./People";
 
 const Stuff = () => (
     <>
-        <Header />
+        <Header text={'Test Test'}/>
         <Paragraph />
         <Square />
         <People />
