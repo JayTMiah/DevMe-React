@@ -1,7 +1,8 @@
 let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]; 
 
 const People = () => (
-    <ul className = 'people-list'>
+//1 & 2
+    <ul className = 'people-list' onClick={ () => console.log('hello world!')}>
         {names.map((value, index) => (
             <li className='name'key={ index }>
                { value }
@@ -12,4 +13,6 @@ const People = () => (
   
   export default People;
 
-  // on line 1 we have an array full of names. this is put into the people component which maps the array into li's inside of the ul. we assign a key to the values because the array might change and we only want to update the thing that has changed and not the rest of the array that hasnt.
+//
+//  1. inside of the UL tag i put a function called onClick
+//  2. inside of the function we log the string whenver the function is called
