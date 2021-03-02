@@ -1,5 +1,26 @@
-const Paragraph = () => (
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quamquam tu hanc copiosiorem etiam soles dicere. Ubi ut eam caperet aut quando? Videmus igitur ut conquiescere ne infantes quidem possint. Magna laus. Bonum patria: miserum exilium. Sed tu istuc dixti bene Latine, parum plane. Duo Reges: constructio interrete. Ergo hoc quidem apparet, nos ad agendum esse natos.</p>
-  );
-  
-  export default Paragraph;
+//1 
+import { Component } from 'react'; 
+
+//2
+class Paragraph extends Component {
+
+//3
+  render() {
+//4
+    let {message} = this.props;
+
+//5
+    return(
+      message ? <p> { message } </p> : <p>I have made the paragraph into a class!</p>
+    )
+  }
+} 
+export default Paragraph;
+
+// 
+//     1. Import Component
+//     2. Turn into a class, and extend Component
+//     3. Add a render function
+//     4. Destructure this.props -> this means we dont have to go and update the JSX
+//     5. Return the original function of Parapgraph 
+// 
