@@ -20,13 +20,14 @@ class Toggletext extends Component {
     handleClick(){
         
         let isClicked = this.state.clicked
-        
+
         this.setState({clicked: !isClicked });
     }
     
     render() {
         
         const {clicked} = this.state;
+        
         const {alternate, initial} = this.props;
   
         return(

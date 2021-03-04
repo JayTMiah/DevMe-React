@@ -6,39 +6,53 @@ class Counter extends Component {
     constructor(props) {
         
         super(props);
-        
+
+        let {initial} = this.props
+         
         this.state = {
-            clicked: false,
+            counter: initial 
         }
 
-        this.handleClick = this.handleClick.bind(this);
-
+        this.addition = this.addition.bind(this);
+        this.subtraction = this.subtraction.bind(this);
     }
 
-    handleClick(){
-        
-        let isClicked = this.state.clicked
-        
-        this.setState({clicked: !isClicked });
+    addition(){
+
+        let {counter} = this.state
+        let {max} = this.props
+
+        if(counter < max) {
+            this.setState({ counter : counter + 1 });
+        }        
+    }
+
+    subtraction(){
+
+        let {counter} = this.state
+
+        if(counter > 0) {
+            this.setState({ counter : counter - 1 });
+        } 
     }
     
     render() {
         
-        const {clicked} = this.state;
+        const {counter} = this.state;
         const {max, initial} = this.props;
   
         return(
             
             <>
                 <p>
-                    50
+                    {counter}
                 </p>
 
-                <button className='addittion' onClick={this.handleClick}>
+                <button className='addittion' onClick={this.addition}>
                     +
                 </button>
 
-                <button className='subtraction' onClick={this.handleClick}>
+                <button className='subtraction' onClick={this.subtraction}>
                     -
                 </button>
                 
